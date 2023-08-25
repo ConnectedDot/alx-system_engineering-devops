@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Backup the original hosts file
+sudo cp /etc/hosts /etc/hosts.bak
+
+# Edit the hosts file to add the required configurations
+sudo sed -i 's/localhost$/localhost 127.0.0.2/' /etc/hosts
+sudo sed -i 's/facebook.com$/facebook.com 8.8.8.8/' /etc/hosts
+
+# Restart the network service to apply the changes
+sudo systemctl restart systemd-networkd
+
+echo "Configuration completed successfully!"
