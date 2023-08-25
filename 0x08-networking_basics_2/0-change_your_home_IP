@@ -1,19 +1,9 @@
-
 !/usr/bin/env bash
 # Configures an Ubuntu server as follows:
 #   - localhost resolves to 127.0.0.2
 #   - facebook.com resolves to 8.8.8.8
 
-# !/bin/bash
-
-# Backup the original hosts file
-sudo cp /etc/hosts /etc/hosts.bak
-
-# Edit the hosts file to add the required configurations
-sudo sed -i 's/localhost$/localhost 127.0.0.2/' /etc/hosts
-sudo sed -i 's/facebook.com$/facebook.com 8.8.8.8/' /etc/hosts
-
-# Restart the network service to apply the changes
-sudo systemctl restart systemd-networkd
-
-echo "Configuration completed successfully!"
+cp /etc/hosts ~/hosts.new
+echo "127.0.0.2		localhost" > ~/hosts.new
+echo "8.8.8.8		facebook.com" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
