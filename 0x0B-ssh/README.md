@@ -1,48 +1,18 @@
-# 0x0B. SSH
+# SSH
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Username</th>
-      <th>IP</th>
-      <th>State</th>
-      <th></th>
-    </tr>
-  </thead>
+In this project, I became familiar connecting to and working
+with servers using the SSH protocol. I worked on a server
+provided by ALX.
 
-  <tbody>
-      <tr>
-        <td>59637-web-01</td>
-        <td><code>ubuntu</code></td>
-        <td><code>52.23.212.37</code></td>
-        <td>running</td>
-        <td>
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-              Actions
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right">
-                <li><a data-confirm="Are you sure to reboot 59637-web-01?" href="/servers/9390/soft_reboot">Soft reboot</a></li>
-                  <li><a data-confirm="Are you sure to hard reboot 59637-web-01?" href="/servers/9390/hard_reboot">Hard reboot</a></li>
+## Tasks :page_with_curl:
 
-              <li role="separator" class="divider"></li>
+* **0. Use a private key**
+  * [0-use_a_private_key](./0-use_a_private_key): Bash script that uses `ssh` to connect to my
+Holberton-provided server.
 
-                <li>
-                  <a data-confirm="Are you sure you'd like a new server?
-- This server will be destroyed
-- Did you update your public SSH key in your user profile yet?
+* **1. Create an SSH key pair**
+  * [1-create_ssh_key_pair](./1-create_ssh_key_pair): Bash script that creates an RSA key pair.
 
-This action can take time...
-Please, be patient..." href="/servers/9390/ask_new">
-                    Ask a new server
-</a>                </li>
-            </ul>
-          </div>
-        </td>
-      </tr>
-    
-  </tbody>
-</table>
+* **2. Client configuration file**
+  * [2-ssh_config](./2-ssh_config): SSH configuration file configured to use the private key
+`~/.ssh/holberton` and to refuse authentication using a password.
