@@ -10,4 +10,4 @@
 ---
 
 ## Author
-* **Theophilus** - (https://github.com/ConnectedDot)
+* **Theophilus Samuel** - (https://github.com/ConnectedDot)
