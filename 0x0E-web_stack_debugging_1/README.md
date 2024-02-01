@@ -10,4 +10,4 @@
 ---
 
 ## Author
-* **Bright Daniel** - (https://github.com/brightdaniel)
+* **Theophilus** - (https://github.com/ConnectedDot)
