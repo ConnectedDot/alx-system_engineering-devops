@@ -10,3 +10,17 @@ ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.html
 service nginx start
 
+#!/bin/bash
+
+# Install Nginx
+apt-get update
+apt-get install -y nginx
+
+# Copy custom configuration file
+cp /vagrant/default /etc/nginx/sites-available/
+
+# Create symbolic link to configuration file
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+
+# Restart Nginx
+service nginx restart
