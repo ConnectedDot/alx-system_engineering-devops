@@ -22,3 +22,4 @@ backend iconnects.tech_backend
 EOT
 
 sudo service haproxy restart
+
